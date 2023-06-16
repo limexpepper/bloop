@@ -4,7 +4,7 @@ import Pages from "./pages/Pages";
 function App() {
   return (
     <div className="App">
-      <h1>Hello</h1>
+      <h1>Welcome to Bloop!</h1>
       <Pages />
     </div>
   );

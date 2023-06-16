@@ -9,7 +9,7 @@ function Card( {toilet} ) {
             exit={ { opacity: 0 } }
             transition={ { duration: 0.5 } }
             className="card">
-                <p className="tag">{toilet.location}</p>
+                <h2 className="tag">{toilet.location}</h2>
                 <p className="tag">{toilet.address}</p>
                 <p className="tag">{toilet.rating}</p>
         </motion.div>

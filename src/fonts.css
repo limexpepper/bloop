@@ -1,0 +1,23 @@
+@font-face {
+    font-family: 'Hauora Sans';
+    src: url('./fonts/hauora_sans/fonts/otf/Hauora-Bold.otf') format('opentype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Hauora Sans';
+    src: url('./fonts/hauora_sans/fonts/otf/Hauora-Medium.otf') format('opentype');
+    font-weight: 500; /* Medium */
+}
+
+@font-face {
+    font-family: 'Hauora Sans';
+    src: url('./fonts/hauora_sans/fonts/otf/Hauora-Regular.otf') format('opentype');
+    font-weight: normal; /* Regular */
+}
+
+@font-face {
+    font-family: 'Hauora Sans';
+    src: url('./fonts/hauora_sans/fonts/otf/Hauora-Light.otf') format('opentype');
+    font-weight: light;
+}
