@@ -13,7 +13,7 @@ function Filter({toilets, setFilteredToilets, activeFilter, setActiveFilter}) {
     setFilteredToilets(filtered);
   }, [activeFilter]);  
   return (
-    <div className="filter-container">
+    <div className="filter">
         <button 
           className={ activeFilter === "all" ? "active" : ""}
           onClick={() => setActiveFilter("all")}>All
