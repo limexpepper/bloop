@@ -1,9 +1,35 @@
 @import url('./fonts.css');
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box; /* setting this to border-box as the css default is content-box */
+}
+
+:root {
+  --midnight-black:#1B2021;
+  --dark-grey: #485558;
+  --silver-grey: #758A8F;
+  --light-grey: #F1F4F4;
+  --electric-blue: #0167FF;
+  --baby-yellow: #FEFFF4;
+  --gold: #AE7D00;
+
+}
+
 body {
-  font-family: 'Hauora Sans';
+  margin-top: 0px;
+  margin-bottom: 0px;
+  margin-right: 217px;
+  margin-left: 217px;
+
   background-color: #FEFFF4;
-  width: 1280; height: 832; position: 'relative';
+
+  font-family: 'Hauora Sans';
+  font-weight: normal;
+  text-align: left;  
+  font-size: 1rem;
+  color: var(--midnight-black);
 }
 
 h1 {
@@ -22,3 +48,25 @@ p {
   font-weight: normal; 
 }
 
+/* 
+Form elements such as 'button' or 'select'
+do not inherit properties from parent elements.
+As such, "font: inherit;" would force a form element 
+to inherit the properties defined for body{}
+*/
+button {
+  width: 121px;
+  height: 52px;
+  margin: 4px;
+
+  border-radius: 24px;
+  border: 1px solid;
+  border-color: var(--electric-blue);
+
+  background: inherit;
+
+  font: inherit; 
+  color: var(--electric-blue);
+
+  cursor: pointer;
+}
