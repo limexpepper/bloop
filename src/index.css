@@ -52,10 +52,32 @@ p {
   font-weight: normal; 
 }
 
-/* 
-Form elements such as 'button' or 'select'
-do not inherit properties from parent elements.
-As such, "font: inherit;" would force a form element 
-to inherit the properties defined for body{}
-*/
+/* unvisited link */
+a:link {
+  color: var(--electric-blue);
+  text-decoration: none;
+}
 
+/* visited link */
+a:visited {
+  color: green;
+  text-decoration: none;
+}
+
+/* mouse over link */
+a:hover {
+  color: hotpink;
+  text-decoration: none;
+}
+
+/* selected link */
+a:active {
+  color: orangered;
+  text-decoration: none;
+}
+
+.nav {
+  Display: flex;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}

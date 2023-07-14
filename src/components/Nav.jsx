@@ -2,10 +2,9 @@ import React from 'react'
 
 function Nav() {
   return (
-    <>
-      <p>About Bloop</p>
-      <p>How it works</p>
-    </>
+    <div className="nav">
+      <a href="./about.html">About Bloopy</a>
+    </div>
   )
 }
 

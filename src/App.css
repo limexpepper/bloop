@@ -41,6 +41,12 @@ button {
   color: var(--electric-blue);
 
   cursor: pointer;
+  /* 
+  Form elements such as 'button' or 'select'
+  do not inherit properties from parent elements.
+  As such, "font: inherit;" would force a form element 
+  to inherit the properties defined for body{}
+  */
 }
 
 input {
@@ -60,7 +66,6 @@ input {
 
   cursor: pointer;
 }
-
 
 .filter button{
   /* offset-x | offset-y | blur-radius | spread-radius | color */
