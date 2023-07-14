@@ -1,18 +1,66 @@
-.toiletCards{
+.cards {
   display: grid;
-  grid-template-columns: repeat(3, minmax(200px, 1fr)); /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
-  gap: 1.5rem;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+  gap: 0.25rem;
+  margin-top: 1rem;
 }
 
-.card{
-  height: 100%;
-  width: 100%;
-  border: 1px solid #000000;
-  padding: 10% 10%;
+.card {
+  /* height: 100%;
+  width: 100%; */
+  border: 1px solid var(--midnight-black);
   border-radius: 1rem;
-  margin: 16px;/*margin: 5% 0%;*/
+  background-color: white;
+  padding: 1rem;
+  /*padding: 10% 10%;*/
+  
+ /* margin: 16px;*//*margin: 5% 0%;*/
   /*flex: 1;*/
 }
+
+.search-wrapper {
+  display: flex;
+}
+
+.hide {
+  display: none;
+}
+
+button {
+  width: 121px;
+  height: 52px;
+  margin: 4px;
+
+  border-radius: 24px;
+  border: 1px solid;
+  border-color: var(--electric-blue);
+
+  background: inherit;
+
+  font: inherit; 
+  color: var(--electric-blue);
+
+  cursor: pointer;
+}
+
+input {
+  width: 300px;
+  height: 52px;
+  margin: 4px;
+  padding-left: 1.25rem;
+
+  border-radius: 24px;
+  border: 1px solid;
+  border-color: var(--electric-blue);
+
+  background: var(--electric-blue);
+
+  font: inherit;
+  color: white; /* placeholder colour is specified above, not here */
+
+  cursor: pointer;
+}
+
 
 .filter button{
   /* offset-x | offset-y | blur-radius | spread-radius | color */

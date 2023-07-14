@@ -4,11 +4,11 @@ function Filter({items, setFilteredItems, activeFilter, setActiveFilter}) {
   useEffect(() => {
     if (activeFilter === "all"){
       setActiveFilter("all")
-      return
+      return 
     }
     
     const filtered = items.filter((item) => 
-      item.type.toString().includes(activeFilter)
+      item.type.toString().includes(activeFilter) /* accessing the 'type' column in the toilets table */
     )
     setFilteredItems(filtered);
   }, [activeFilter]);  

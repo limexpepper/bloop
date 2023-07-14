@@ -1,5 +1,6 @@
 import Card from '../components/Card'
 import Filter from '../components/Filter'
+import Search from '../components/Search';
 import supabase from '../supabase'
 import React from 'react'
 import { useEffect, useState } from 'react'
@@ -27,8 +28,11 @@ function Home() {
     
   return (
     <div className="Home">
-        <Filter items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
-        <motion.div Layout className="toiletCards">
+        <div className="search-wrapper">
+            <Search items={items} setFilteredItems={setFilteredItems}/>
+            <Filter items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
+        </div>
+        <motion.div Layout className="cards">
             <AnimatePresence>
             {filteredItems.map( (filteredItem) => (
                 <Card key={filteredItem.id} filteredItem={filteredItem} />
