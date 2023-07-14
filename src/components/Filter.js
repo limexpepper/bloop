@@ -3,15 +3,15 @@ import {useEffect} from 'react'
 function Filter({items, setFilteredItems, activeFilter, setActiveFilter}) {
   useEffect(() => {
     if (activeFilter === "all"){
-      setActiveFilter("all")
+      setFilteredItems(items)
       return 
     }
     
     const filtered = items.filter((item) => 
       item.type.toString().includes(activeFilter) /* accessing the 'type' column in the toilets table */
     )
-    setFilteredItems(filtered);
-  }, [activeFilter]);  
+    setFilteredItems(filtered)
+  }, [activeFilter])  
   return (
     <div className="filter">
         <button 
