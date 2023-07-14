@@ -1,16 +1,16 @@
 import {useEffect} from 'react'
 
-function Filter({toilets, setFilteredToilets, activeFilter, setActiveFilter}) {
+function Filter({items, setFilteredItems, activeFilter, setActiveFilter}) {
   useEffect(() => {
     if (activeFilter === "all"){
       setActiveFilter("all")
       return
     }
     
-    const filtered = toilets.filter((toilet) => 
-      toilet.type.toString().includes(activeFilter)
+    const filtered = items.filter((item) => 
+      item.type.toString().includes(activeFilter)
     )
-    setFilteredToilets(filtered);
+    setFilteredItems(filtered);
   }, [activeFilter]);  
   return (
     <div className="filter">

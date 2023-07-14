@@ -6,8 +6,8 @@ import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
 
 function Home() {
-    const [toilets, setToilets] = useState([])
-    const [filteredToilets, setFilteredToilets] = useState([])
+    const [items, setItems] = useState([])
+    const [filteredItems, setFilteredItems] = useState([])
     const [activeFilter, setActiveFilter] = useState("unselected")
 
     const fetchData = async () => {
@@ -15,8 +15,8 @@ function Home() {
         .from('toilets')
         .select()
 
-        setToilets(data) 
-        setFilteredToilets(data)
+        setItems(data) 
+        setFilteredItems(data)
         //console.log("data from supabase: ", data)
     }
 
@@ -27,11 +27,11 @@ function Home() {
     
   return (
     <div className="Home">
-        <Filter toilets={toilets} setFilteredToilets={setFilteredToilets} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
+        <Filter items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
         <motion.div Layout className="toiletCards">
             <AnimatePresence>
-            {filteredToilets.map( toilet => (
-                <Card key={toilet.id} toilet={toilet} />
+            {filteredItems.map( (filteredItem) => (
+                <Card key={filteredItem.id} filteredItem={filteredItem} />
             ))}
             </AnimatePresence>
         </motion.div>
@@ -40,3 +40,19 @@ function Home() {
 }
 
 export default Home
+
+/*
+*** In javascript, there are functions such as filter() and map(). 
+*** What sort of functions are these?
+
+In JavaScript, the functions filter and map are higher-order functions that operate on arrays. 
+They are part of the built-in array methods and provide a convenient way to manipulate and transform array elements.
+
+To use filter() and map(), you need to pass in a callback function. 
+This callback function will be used by filter() and map() on each element in the original array
+Note that the callback function is code which you write. In other words,the callback function tells filter() and map() how to treat each element in the original array
+
+For example, The filter function takes the original array [1, 2, 3, 4, 5] and the callback function 
+It starts examining each element of the original array, starting from the first element (1).
+For each element, it calls the callback function and passes the element as an argument (e.g., callback(1)).
+*/
