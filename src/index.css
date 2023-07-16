@@ -52,32 +52,35 @@ p {
   font-weight: normal; 
 }
 
-/* unvisited link */
-a:link {
+.nav {
+  display: flex;
+  padding: 0.25rem; /* used padding instead of margins as a bottom margin would add space between the navBar and search elements */
+  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2); 
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+.nav a {
   color: var(--electric-blue);
   text-decoration: none;
 }
 
-/* visited link */
-a:visited {
-  color: green;
-  text-decoration: none;
-}
-
-/* mouse over link */
-a:hover {
+.nav a:hover {
   color: hotpink;
-  text-decoration: none;
 }
 
-/* selected link */
-a:active {
-  color: orangered;
-  text-decoration: none;
-}
-
-.nav {
-  Display: flex;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+.logo {
+  font-family: 'Poppins';
+  font-weight: bold;
+  text-align: left;  
+  font-size: 2rem;
+  color: var(--electric-blue);
 }

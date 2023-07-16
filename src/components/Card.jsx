@@ -13,6 +13,7 @@ function Card( {filteredItem} ) {
                 <h2>{filteredItem.location}</h2>
                 <p>{filteredItem.address}</p>
                 <p>{filteredItem.rating}</p>
+                <p>{filteredItem.type}</p>
         </motion.div>
     )
 }

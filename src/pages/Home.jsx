@@ -29,7 +29,7 @@ function Home() {
   return (
     <div className="Home">
         <div className="search-wrapper">
-            <Search items={items} setFilteredItems={setFilteredItems}/>
+            <Search items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter}/>
             <Filter items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
         </div>
         <motion.div Layout className="cards">

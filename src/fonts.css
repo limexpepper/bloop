@@ -21,3 +21,15 @@
     src: url('./fonts/hauora_sans/fonts/otf/Hauora-Light.otf') format('opentype');
     font-weight: light;
 }
+
+@font-face {
+    font-family: 'Poppins';
+    src: url('./fonts/Poppins/Poppins-Black.ttf') format('truetype');
+    font-weight: bold;
+}
+
+@font-face {
+    font-family: 'Sora';
+    src: url('./fonts/Sora/Sora-VariableFont_wght.ttf') format('truetype');
+    font-weight: bold;
+}

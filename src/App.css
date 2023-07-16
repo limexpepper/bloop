@@ -67,7 +67,7 @@ input {
   cursor: pointer;
 }
 
-.filter button{
+.filter button {
   /* offset-x | offset-y | blur-radius | spread-radius | color */
   box-shadow: 0px 2px 2px 0px var(--electric-blue);
 }
@@ -77,3 +77,4 @@ button.active {
   background: #0167FF;
   color: white;
 }
+
