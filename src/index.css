@@ -54,10 +54,11 @@ p {
 
 .nav {
   display: flex;
-  padding: 0.25rem; /* used padding instead of margins as a bottom margin would add space between the navBar and search elements */
-  box-shadow: 0 2px 2px -2px rgba(0,0,0,.2); 
+  padding: 0.25rem; 
+  /* box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);  */
   justify-content: space-between;
   align-items: center;
+  margin-bottom: 2.5rem; /* spacing between nav and search elements */
 }
 
 .nav ul {
