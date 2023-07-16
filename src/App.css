@@ -1,25 +1,19 @@
 .cards {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
-  gap: 0.25rem;
-  margin-top: 1rem;
+  gap: 1rem;
 }
 
 .card {
-  /* height: 100%;
-  width: 100%; */
   border: 1px solid var(--midnight-black);
   border-radius: 1rem;
   background-color: white;
   padding: 1rem;
-  /*padding: 10% 10%;*/
-  
- /* margin: 16px;*//*margin: 5% 0%;*/
-  /*flex: 1;*/
 }
 
 .search-wrapper {
   display: flex;
+  margin-bottom: 2rem;
 }
 
 .hide {
@@ -50,7 +44,7 @@ button {
 }
 
 input {
-  width: 300px;
+  width: 350px;
   height: 52px;
   margin: 4px;
   padding-left: 1.25rem;
