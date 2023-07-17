@@ -27,7 +27,7 @@ body {
   margin-right: 217px;
   margin-left: 217px;
 
-  background-color: #FEFFF4;
+  background-color: var(--baby-yellow);
 
   font-family: 'Hauora Sans';
   font-weight: normal;

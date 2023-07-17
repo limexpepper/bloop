@@ -1,23 +1,6 @@
-.cards {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
-  gap: 1rem;
-}
-
-.card {
-  border: 1px solid var(--midnight-black);
-  border-radius: 1rem;
-  background-color: white;
-  padding: 1rem;
-}
-
 .search-wrapper {
   display: flex;
   margin-bottom: 2rem;
-}
-
-.hide {
-  display: none;
 }
 
 button {
@@ -63,7 +46,7 @@ input {
 
 .filter button {
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: 0px 2px 2px 0px var(--electric-blue);
+  box-shadow: 0px 1.5px 1.5px 0px var(--electric-blue);
 }
 
 button.active {
@@ -72,3 +55,36 @@ button.active {
   color: white;
 }
 
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); /*grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));*/
+  gap: 1rem;
+}
+
+.card {
+  /* border: 1px solid var(--midnight-black); */
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 100%;
+  height: 351px;
+  background-color: white;
+  box-shadow: 0px 2px 2px 0px var(--light-grey);
+  position: relative;
+}
+
+.swiper-wrapper {
+  display: flex;
+  gap: 0.25rem;
+  /* justify-content: center; */
+  position: absolute;
+  bottom: 1rem;
+  left: 0;
+  right: 0;
+}
+
+.swiper {
+  background-color: #0166ff;
+  border-radius: 1rem;
+  height: 0.5rem;
+  width: 0.5rem;
+}
