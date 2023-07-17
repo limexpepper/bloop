@@ -10,6 +10,8 @@ function Home() {
     const [items, setItems] = useState([])
     const [filteredItems, setFilteredItems] = useState([])
     const [activeFilter, setActiveFilter] = useState("unselected")
+    const [searchTerm, setSearchTerm] = useState("");
+    var filterSelected = false;
 
     const fetchData = async () => {
         const { data } = await supabase
@@ -29,8 +31,8 @@ function Home() {
   return (
     <div className="Home">
         <div className="search-wrapper">
-            <Search items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter}/>
-            <Filter items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} setActiveFilter={setActiveFilter}/>
+            <Search items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
+            <Filter items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} setActiveFilter={setActiveFilter} searchTerm={searchTerm}/>
         </div>
         <motion.div Layout className="cards">
             <AnimatePresence>

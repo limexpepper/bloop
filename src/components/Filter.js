@@ -1,14 +1,22 @@
 import {useEffect} from 'react'
 
-function Filter({items, setFilteredItems, activeFilter, setActiveFilter}) {
+function Filter({items, setFilteredItems, activeFilter, setActiveFilter, searchTerm}) {
   useEffect(() => {
     if (activeFilter === "all"){
       setFilteredItems(items)
       return 
     }
     
-    const filtered = items.filter((item) => 
-      item.type.toString().includes(activeFilter) /* accessing the 'type' column in the toilets table */
+    const filtered = items.filter((item) => {
+        if (searchTerm === "" && item.type.toString().includes(activeFilter)) {
+          return true;
+        } else if (item.location.toString().toLowerCase().includes(searchTerm.toLowerCase()) && item.type.toString().includes(activeFilter)){
+          return true;
+        } else if (item.address.toString().toLowerCase().includes(searchTerm.toLowerCase()) && item.type.toString().includes(activeFilter)){
+          return true;
+        }
+        return false;
+      }
     )
     setFilteredItems(filtered)
   }, [activeFilter])  
