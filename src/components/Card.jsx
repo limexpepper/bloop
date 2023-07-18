@@ -42,7 +42,7 @@ function Card({ filteredItem }) {
         modules={[Navigation, Pagination, A11y]}
         spaceBetween={0}
         slidesPerView={1}
-        navigation
+         navigation
         pagination={{ clickable: true }}
         onSlideChange={() => console.log("slide change")}
         onSwiper={(swiper) => console.log(swiper)}

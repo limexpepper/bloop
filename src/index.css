@@ -85,3 +85,27 @@ p {
   font-size: 2rem;
   color: var(--electric-blue);
 }
+
+.swiper-button-next,
+.swiper-button-prev {
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+
+/* Remove default arrows from swiperJS */
+.swiper-button-next::after,
+.swiper-button-prev::after {
+  display: none;
+}
+
+/* TODO: add custom arrow
+
+See https://www.youtube.com/watch?v=4aJPgKLwAGY at 11:44
+.swiper-button-prev {
+ background-image: insert svg;
+}
+
+.swiper-button-next {
+  background-image: insert svg
+} */
