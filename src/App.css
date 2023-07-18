@@ -72,10 +72,9 @@ button.active {
   position: relative;
 }
 
-.swiper-wrapper {
+/* .swiper-wrapper {
   display: flex;
   gap: 0.25rem;
-  /* justify-content: center; */
   position: absolute;
   bottom: 1rem;
   left: 0;
@@ -87,4 +86,4 @@ button.active {
   border-radius: 1rem;
   height: 0.5rem;
   width: 0.5rem;
-}
+} */
