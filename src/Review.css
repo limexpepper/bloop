@@ -29,7 +29,7 @@
   color: white;
 }
 
-#btn-submit-review {
+.btn-submit-review {
   width: 240px;
   height: 40px;
   margin: 4px;
@@ -37,11 +37,36 @@
   border-radius: 24px;
   border: 1px solid;
   border-color: var(--electric-blue);
+
+  background: inherit;
+
+  font: inherit;
+  color: var(--electric-blue);
+
+  cursor: pointer;
+
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: 0px 1.5px 1.5px 0px var(--electric-blue);
+}
+
+.btn-submit-review-active {
+  width: 240px;
+  height: 40px;
+  margin: 4px;
+
+  border-radius: 24px;
+  border: 1px solid;
+  border-color: var(--electric-blue);
+
   background: var(--electric-blue);
 
   font: inherit;
-  color: white;
+  color: var(--baby-yellow);
+
   cursor: pointer;
+
+  /* offset-x | offset-y | blur-radius | spread-radius | color */
+  box-shadow: inset 0px 2px 2px var(--midnight-black);
 }
 
 .review .buttons-wrapper {
@@ -53,7 +78,8 @@
 
 /* Custom scrollbar styles for webkit-based browsers */
 .buttons-wrapper::-webkit-scrollbar {
-  width: 0.4em; /* Set the width of the scrollbar */
+  
+    width: 0.4em; /* Set the width of the scrollbar */
 }
 
 .buttons-wrapper::-webkit-scrollbar-track {

@@ -34,10 +34,10 @@ function Home() {
             <Search items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
             <Filter items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} setActiveFilter={setActiveFilter} searchTerm={searchTerm}/>
         </div>
-        <motion.div Layout className="cards">
+        <motion.div layout className="cards">
             <AnimatePresence>
             {filteredItems.map( (filteredItem) => (
-                <Card key={filteredItem.id} filteredItem={filteredItem} />
+                <Card key={filteredItem.id_entity} filteredItem={filteredItem} />
             ))}
             </AnimatePresence>
         </motion.div>
