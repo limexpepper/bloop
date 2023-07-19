@@ -30,7 +30,7 @@ function Home() {
     
   return (
     <div className="Home">
-        <div className="search-wrapper">
+        <div className="search-filter-wrapper">
             <Search items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
             <Filter items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} setActiveFilter={setActiveFilter} searchTerm={searchTerm}/>
         </div>

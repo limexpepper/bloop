@@ -18,7 +18,10 @@
 
   --dark-grey: #485558;
   --silver-grey: #758A8F;
-  --light-grey: #F1F4F4;
+  --light-grey-3: #ADB9BC;
+  --light-grey-2: #C8D0D2;
+  --light-grey-1: #E4E8E9;
+  --light-grey-0: #F1F4F4;
 
   --gold: #AE7D00;
   --light-gold: #FFF5DB;
@@ -115,3 +118,5 @@ See https://www.youtube.com/watch?v=4aJPgKLwAGY at 11:44
 .swiper-button-next {
   background-image: insert svg
 } */
+
+

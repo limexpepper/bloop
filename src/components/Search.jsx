@@ -37,7 +37,7 @@ function Search({ items, setFilteredItems, activeFilter, searchTerm, setSearchTe
   }, [searchTerm]);
 
   return (
-    <div className="Search">
+    <div className="search">
       <input type="text" placeholder="Search..." onChange={(event) => setSearchTerm(event.target.value)} />
     </div>
   );

@@ -1,9 +1,9 @@
-.search-wrapper {
+.search-filter-wrapper {
   display: flex;
   margin-bottom: 2rem;
 }
 
-input {
+.search input {
   width: 350px;
   height: 52px;
   margin: 4px;
