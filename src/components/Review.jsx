@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import supabase from "../supabase";
 
-function Review() {
+function Review(filteredItem) {
   // Define the options and their initial state
   const options = [
     { id_quality: "q1", quality: "auto-tap", selected: false },
@@ -47,8 +47,7 @@ function Review() {
     // Insert the data into the Supabase database
     const { error } = await supabase
       .from("reviews-toilets")
-      .insert([dataToInsert]);
-
+      .insert({id_entity: filteredItem.id_entity, name: 'Denmark'});
     if (error) {
       console.error("Error inserting data:", error);
     } else {
