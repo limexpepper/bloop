@@ -20,7 +20,19 @@ function Card({ filteredItem }) {
       type: 'item',
       content: (
         <div>
-          <p>{filteredItem.rating}</p>
+          <div
+          className={
+            filteredItem.avgToiletRating === 'bronze'
+              ? 'rating-tag-bronze'
+              : filteredItem.avgToiletRating === 'silver'
+              ? 'rating-tag-silver'
+              : filteredItem.avgToiletRating === 'gold'
+              ? 'rating-tag-gold'
+              : 'rating-tag-null' // default class name if none of the conditions match
+          }
+        >
+          {filteredItem.avgToiletRating}
+        </div>
           <p>{filteredItem.location}</p>
           <p>{filteredItem.address}</p>
         </div>

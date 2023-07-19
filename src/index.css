@@ -11,14 +11,20 @@
 }
 
 :root {
+  --electric-blue: #0167FF;
+  --baby-yellow: #FEFFF4;
+
   --midnight-black:#1B2021;
+
   --dark-grey: #485558;
   --silver-grey: #758A8F;
   --light-grey: #F1F4F4;
-  --electric-blue: #0167FF;
-  --baby-yellow: #FEFFF4;
-  --gold: #AE7D00;
 
+  --gold: #AE7D00;
+  --light-gold: #FFF5DB;
+
+  --bronze: #B45900;
+  --light-bronze: #FFEDDB;
 }
 
 body {

@@ -15,7 +15,7 @@ function Home() {
 
     const fetchData = async () => {
         const { data } = await supabase
-        .from('toilets')
+        .from('entities')
         .select()
 
         setItems(data) 

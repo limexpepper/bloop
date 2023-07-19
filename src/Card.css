@@ -1,0 +1,71 @@
+.cards {
+  display: grid;
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(200px, 1fr)
+  ); 
+  gap: 1rem;
+}
+
+.card {
+  border-radius: 1rem;
+  padding: 1rem;
+  width: 100%;
+  height: 351px;
+  background-color: white;
+  box-shadow: 0px 2px 2px 0px var(--light-grey);
+  position: relative;
+}
+
+.rating-tag-gold {
+  display: flex;
+  height: 28px;
+  width: 79px;
+  border: 0px none;
+  align-items: center;
+  padding: 0.25rem;
+  font-weight: bold;
+  background: var(--light-gold);
+  color: var(--gold);
+}
+
+.rating-tag-silver {
+  display: flex;
+  height: 28px;
+  width: 79px;
+  border: 0px none;
+  align-items: center;
+  padding: 0.25rem;
+  font-weight: bold;
+  background: var(--light-grey);
+  color: var(--silver-grey);
+}
+
+.rating-tag-bronze {
+  display: flex;
+  height: 28px;
+  width: 79px;
+  border: 0px none;
+  align-items: center;
+  padding: 0.25rem;
+  font-weight: bold;
+  background: var(--light-bronze);
+  color: var(--bronze);
+}
+
+.rating-tag-null {
+  display: flex;
+  height: 28px;
+  width: 79px;
+  border: 0px none;
+  align-items: center;
+  padding: 0.25rem;
+  font-weight: bold;
+  background: var(--light-grey);
+  color: var(--dark-grey);
+}
+
+.swiper navigation {
+  width: 10px;
+  height: 10px;
+}
