@@ -15,7 +15,7 @@ function Review(filteredItem) {
     { id_quality: "q9", quality: "air-conditioned", selected: false },
     { id_quality: "q10", quality: "mirror", selected: false },
     { id_quality: "q11", quality: "music", selected: false },
-    { id_quality: "q12", quality: "scent", selected: false },
+    { id_quality: "q12", quality: "scent", selected: false }
   ];
 
   const [qualities, setQualities] = useState(options);
@@ -45,9 +45,22 @@ function Review(filteredItem) {
     });
 
     // Insert the data into the Supabase database
-    const { error } = await supabase
-      .from("reviews-toilets")
-      .insert({id_entity: filteredItem.id_entity, name: 'Denmark'});
+    const { error } = await supabase.from("reviews-toilets").insert({
+      id_entity: filteredItem.id_entity,
+      rating: null, 
+      autoTap: dataToInsert["auto-tap"],
+      autoSoap: dataToInsert["auto-soap"],
+      dry: dataToInsert.dry,
+      odourless: dataToInsert.odorless,
+      grimefree: dataToInsert["grime-free"],
+      spaciousCubicle: dataToInsert["spacious cubicle"],
+      noEntranceDoor: dataToInsert["no entrance door"],
+      paperTowels: dataToInsert["paper towels"],
+      mirror: dataToInsert.mirror,
+      music: dataToInsert.music,
+      scent: dataToInsert.scent,
+      aircon: dataToInsert["air-conditioned"]
+    });
     if (error) {
       console.error("Error inserting data:", error);
     } else {
@@ -71,7 +84,11 @@ function Review(filteredItem) {
       <p>You're giving it...</p>
       <button
         onClick={handleFormSubmit}
-        className={submitReview === true ? "btn-submit-review-active" : "btn-submit-review"}
+        className={
+          submitReview === true
+            ? "btn-submit-review-active"
+            : "btn-submit-review"
+        }
       >
         Submit
       </button>
