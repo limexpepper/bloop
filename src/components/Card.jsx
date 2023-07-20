@@ -38,7 +38,7 @@ function Card({ filteredItem }) {
         </div>
       ),
     },
-    { type: 'component', content: <Review key={filteredItem.id_entity} filteredItem={filteredItem}/> },
+    { type: 'component', content: <Review key={filteredItem.id_entity} id_entity={filteredItem.id_entity}/> },
   ];
 
   return (

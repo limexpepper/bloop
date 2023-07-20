@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import supabase from "../supabase";
 
-function Review(filteredItem) {
-  // Define the options and their initial state
+function Review(id_entity) {
+
   const options = [
     { id_quality: "q1", quality: "auto-tap", selected: false },
     { id_quality: "q2", quality: "auto-soap", selected: false },
@@ -30,8 +30,14 @@ function Review(filteredItem) {
   };
 
   const [submitReview, setSubmitReview] = useState(false);
+
   const handleFormSubmit = async () => {
+
     setSubmitReview(!submitReview);
+    if (submitReview === false){
+      console.log("submit button has been unselected")
+      return;
+    }
     // Prepare the data to be inserted into the database
     const dataToInsert = {};
     qualities.forEach((option) => {
@@ -46,7 +52,7 @@ function Review(filteredItem) {
 
     // Insert the data into the Supabase database
     const { error } = await supabase.from("reviews-toilets").insert({
-      id_entity: filteredItem.id_entity,
+      id_entity: id_entity.id_entity,
       rating: null, 
       autoTap: dataToInsert["auto-tap"],
       autoSoap: dataToInsert["auto-soap"],
