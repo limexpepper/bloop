@@ -8,6 +8,7 @@ import "swiper/css/pagination";
 import "swiper/css/scrollbar";
 
 import Review from "./Review";
+import Summary from "./Summary";
 
 import { useState } from "react";
 
@@ -16,29 +17,8 @@ function Card({ filteredItem }) {
 
   // Create an array of slides (filteredItem and Review) using map()
   const slides = [
-    {
-      type: 'item',
-      content: (
-        <div>
-          <div
-          className={
-            filteredItem.avgToiletRating === 'bronze'
-              ? 'rating-tag-bronze'
-              : filteredItem.avgToiletRating === 'silver'
-              ? 'rating-tag-silver'
-              : filteredItem.avgToiletRating === 'gold'
-              ? 'rating-tag-gold'
-              : 'rating-tag-null' // default class name if none of the conditions match
-          }
-        >
-          {filteredItem.avgToiletRating}
-        </div>
-          <p>{filteredItem.location}</p>
-          <p>{filteredItem.address}</p>
-        </div>
-      ),
-    },
-    { type: 'component', content: <Review key={filteredItem.id_entity} id_entity={filteredItem.id_entity}/> },
+    { type: 'item', content: <Summary filteredItem={filteredItem} /> },
+    { type: 'component', content: <Review id_entity={filteredItem.id_entity}/> },
   ];
 
   return (

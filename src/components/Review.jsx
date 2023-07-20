@@ -27,9 +27,22 @@ function Review(id_entity) {
         : option
     );
     setQualities(selectedQualities);
+    setCalculatedRating(calculateRating());
   };
 
-  const [submitReview, setSubmitReview] = useState(false);
+  const calculateRating = () => {
+    // Check if q1 to q6 are all true
+    const isSilver = qualities.slice(0, 6).every((option) => option.selected);
+
+    // Check if q1 to q12 are all true
+    const isGold = qualities.every((option) => option.selected);
+
+    // Return the appropriate rating
+    return isGold ? "gold" : isSilver ? "silver" : "bronze";
+  };
+
+  const [submitReview, setSubmitReview] = useState(true);
+  const [calculatedRating, setCalculatedRating] = useState("na");
 
   const handleFormSubmit = async () => {
 
@@ -53,7 +66,7 @@ function Review(id_entity) {
     // Insert the data into the Supabase database
     const { error } = await supabase.from("reviews-toilets").insert({
       id_entity: id_entity.id_entity,
-      rating: null, 
+      rating: calculatedRating, 
       autoTap: dataToInsert["auto-tap"],
       autoSoap: dataToInsert["auto-soap"],
       dry: dataToInsert.dry,
@@ -87,7 +100,9 @@ function Review(id_entity) {
           </button>
         ))}
       </div>
-      <p>You're giving it...</p>
+      <div className="previewRating">
+        <p>You're giving it a ...<h2>{calculatedRating}</h2>...rating</p>
+      </div>
       <button
         onClick={handleFormSubmit}
         className={

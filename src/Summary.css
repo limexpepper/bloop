@@ -1,0 +1,60 @@
+.rating-tag-gold {
+    display: flex;
+    height: 28px;
+    width: 79px;
+    border: 0px none;
+    align-items: center;
+    padding: 0.25rem;
+    font-weight: bold;
+    background: var(--light-gold);
+    color: var(--gold);
+    margin: 1rem;
+  }
+
+.rating-tag-silver {
+    display: flex;
+    height: 28px;
+    width: 79px;
+    border: 0px none;
+    align-items: center;
+    padding: 0.25rem;
+    font-weight: bold;
+    background: var(--light-grey-0);
+    color: var(--silver-grey);
+    margin: 1rem;
+  }
+  
+  .rating-tag-bronze {
+    display: flex;
+    height: 28px;
+    width: 79px;
+    border: 0px none;
+    align-items: center;
+    padding: 0.25rem;
+    font-weight: bold;
+    background: var(--light-bronze);
+    color: var(--bronze);
+    margin: 1rem;
+  }
+  
+  .rating-tag-null {
+    display: flex;
+    height: 28px;
+    width: 79px;
+    border: 0px none;
+    align-items: center;
+    padding: 0.25rem;
+    font-weight: bold;
+    background: var(--light-grey-0);
+    color: var(--dark-grey);
+    margin: 1rem;
+  }
+
+  .summaryInfo{
+    display: block;
+    margin: 1rem;
+  }
+
+  .summaryInfo h1, p {
+    margin: 0.25rem;
+  }

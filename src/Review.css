@@ -29,6 +29,39 @@
   color: white;
 }
 
+.review .buttons-wrapper {
+  height: 280px;
+  display: grid;
+  justify-content: center;
+  overflow-y: auto;
+}
+
+/* Custom scrollbar styles for webkit-based browsers */
+.buttons-wrapper::-webkit-scrollbar {
+  
+    width: 0.4em; /* Set the width of the scrollbar */
+}
+
+.buttons-wrapper::-webkit-scrollbar-track {
+  background-color: var(
+    --light-grey-0
+  ); /* Set the color of the scrollbar track e.g. #f1f1f1 */
+  margin-block-start: 0.2em;
+  margin-block-end: 8rem;
+}
+
+.buttons-wrapper::-webkit-scrollbar-thumb {
+  background-color: #e4e8e9; /* Set the color of the scrollbar thumb */
+  border-radius: 200vw; /* Set the border radius of the scrollbar thumb #888 */
+  border: 1 solid var(--light-grey-2);
+}
+
+.buttons-wrapper::-webkit-scrollbar-thumb:hover {
+  background-color: var(
+    --light-grey-3
+  ); /* Set the color of the scrollbar thumb on hover e.g. #555 */
+}
+
 .btn-submit-review-active {
   width: 240px;
   height: 40px;
@@ -69,35 +102,8 @@
   box-shadow: inset 0px 2px 2px var(--midnight-black);
 }
 
-.review .buttons-wrapper {
-  height: 280px;
-  display: grid;
+.previewRating h1, p {
+  display: flex;
   justify-content: center;
-  overflow-y: auto;
-}
-
-/* Custom scrollbar styles for webkit-based browsers */
-.buttons-wrapper::-webkit-scrollbar {
-  
-    width: 0.4em; /* Set the width of the scrollbar */
-}
-
-.buttons-wrapper::-webkit-scrollbar-track {
-  background-color: var(
-    --light-grey-0
-  ); /* Set the color of the scrollbar track e.g. #f1f1f1 */
-  margin-block-start: 0.2em;
-  margin-block-end: 8rem;
-}
-
-.buttons-wrapper::-webkit-scrollbar-thumb {
-  background-color: #e4e8e9; /* Set the color of the scrollbar thumb */
-  border-radius: 200vw; /* Set the border radius of the scrollbar thumb #888 */
-  border: 1 solid var(--light-grey-2);
-}
-
-.buttons-wrapper::-webkit-scrollbar-thumb:hover {
-  background-color: var(
-    --light-grey-3
-  ); /* Set the color of the scrollbar thumb on hover e.g. #555 */
+  align-items: center;
 }
