@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import supabase from "../supabase";
 
 function Review(id_entity) {
@@ -19,30 +19,38 @@ function Review(id_entity) {
   ];
 
   const [qualities, setQualities] = useState(options);
+  const [calculatedRating, setCalculatedRating] = useState("___");
+  const [switcher, setSwitcher] = useState(false);
+  const [submitReview, setSubmitReview] = useState(true);
+
+  useEffect(() => {
+    setCalculatedRating(calculateRating());
+  }, [switcher])
+
+  const calculateRating = () => {
+    const isNill = qualities.every((option) => option.selected === false);
+
+    const silverCount = qualities.slice(0, 6).filter((option) => option.selected === true).length;
+    const isSilver = silverCount === 6;
+
+    const silverCountOptional = qualities.slice(6, 8).filter((option) => option.selected === true).length;
+    const isSilverOptional = silverCount >= 0;
+  
+    const goldCount = qualities.slice(8, 12).filter((option) => option.selected === true).length;
+    const isGold = isSilver && silverCountOptional === 2 && (goldCount >= 1);
+
+    return isNill ? "___" : isGold ? "gold" : isSilver & isSilverOptional ? "silver" : "bronze";
+  };
 
   const handleOptionClick = (id_quality) => {
     const selectedQualities = qualities.map((option) =>
       id_quality === option.id_quality
         ? { ...option, selected: !option.selected }
         : option
-    );
+        );
     setQualities(selectedQualities);
-    setCalculatedRating(calculateRating());
+    setSwitcher(!switcher);
   };
-
-  const calculateRating = () => {
-    // Check if q1 to q6 are all true
-    const isSilver = qualities.slice(0, 6).every((option) => option.selected);
-
-    // Check if q1 to q12 are all true
-    const isGold = qualities.every((option) => option.selected);
-
-    // Return the appropriate rating
-    return isGold ? "gold" : isSilver ? "silver" : "bronze";
-  };
-
-  const [submitReview, setSubmitReview] = useState(true);
-  const [calculatedRating, setCalculatedRating] = useState("na");
 
   const handleFormSubmit = async () => {
 
@@ -51,11 +59,12 @@ function Review(id_entity) {
       console.log("submit button has been unselected")
       return;
     }
-    // Prepare the data to be inserted into the database
+    
     const dataToInsert = {};
-    qualities.forEach((option) => {
+    qualities.forEach((option) => { 
       dataToInsert[option.quality] = option.selected;
       /* 
+      This function is meant to prepare the data to be inserted into the database
       Each option is an object that has two properties: name and selected 
       In javascript, objects can be thought of as simple implementations of a key-value store, similar to a map data structure. 
       To set a key-value pair, use these [] brackets
@@ -63,7 +72,6 @@ function Review(id_entity) {
       */
     });
 
-    // Insert the data into the Supabase database
     const { error } = await supabase.from("reviews-toilets").insert({
       id_entity: id_entity.id_entity,
       rating: calculatedRating, 
@@ -101,7 +109,9 @@ function Review(id_entity) {
         ))}
       </div>
       <div className="previewRating">
-        <p>You're giving it a ...<h2>{calculatedRating}</h2>...rating</p>
+        <p>You're giving it a </p>
+        <h2>{calculatedRating}</h2>
+        <p> rating</p>
       </div>
       <button
         onClick={handleFormSubmit}

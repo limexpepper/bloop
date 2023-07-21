@@ -102,8 +102,15 @@
   box-shadow: inset 0px 2px 2px var(--midnight-black);
 }
 
-.previewRating h1, p {
+.previewRating {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.previewRating h2, p {
+  margin-top: 0px;
+  margin-bottom: 0px;
 }
