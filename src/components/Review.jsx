@@ -97,6 +97,7 @@ function Review(id_entity) {
 
   return (
     <div className="review">
+      <p id="reviewInstruction">Select any of the qualities below</p>
       <div className="buttons-wrapper">
         {qualities.map((option) => (
           <button

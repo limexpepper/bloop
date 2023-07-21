@@ -3,9 +3,13 @@
   padding: 0.25rem;
 }
 
+#reviewInstruction {
+  color: rgb(224, 211, 32);
+}
+
 .buttons-wrapper button {
-  width: 240px;
-  height: 40px;
+  width: 160px;
+  height: 48px;
   margin: 4px;
 
   border-radius: 24px;
@@ -32,7 +36,8 @@
 .review .buttons-wrapper {
   height: 280px;
   display: grid;
-  justify-content: center;
+  justify-content: right;
+  padding: 1rem;
   overflow-y: auto;
 }
 
@@ -46,7 +51,7 @@
   background-color: var(
     --light-grey-0
   ); /* Set the color of the scrollbar track e.g. #f1f1f1 */
-  margin-block-start: 0.2em;
+  margin-block-start: 1.5rem;
   margin-block-end: 8rem;
 }
 
