@@ -3,18 +3,21 @@ import { useEffect } from "react";
 function Summary({ filteredItem }) {
   return (
     <div>
-      <div
-        className={
-          filteredItem.avgToiletRating === "bronze"
-            ? "rating-tag-bronze"
-            : filteredItem.avgToiletRating === "silver"
-            ? "rating-tag-silver"
-            : filteredItem.avgToiletRating === "gold"
-            ? "rating-tag-gold"
-            : "rating-tag-null" // default class name if none of the conditions match
-        }
-      >
-        {filteredItem.avgToiletRating}
+      <div className="tag-wrapper">
+        <div className="type">{filteredItem.type}</div>
+        <div
+          className={
+            filteredItem.avgToiletRating === "bronze"
+              ? "rating-tag-bronze"
+              : filteredItem.avgToiletRating === "silver"
+              ? "rating-tag-silver"
+              : filteredItem.avgToiletRating === "gold"
+              ? "rating-tag-gold"
+              : "rating-tag-null" // default class name if none of the conditions match
+          }
+        >
+          {filteredItem.avgToiletRating}
+        </div> 
       </div>
       <div className="summaryInfo">
         <h1>{filteredItem.location}</h1>

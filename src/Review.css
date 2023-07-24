@@ -1,18 +1,23 @@
 .review {
-  height: 450px;
+  height: 18rem; 
+}
+
+.review .buttons-wrapper {
+  display: grid;
+  justify-content: center;
+  height: 12rem;   /* height: 280px; */
+  padding: 1rem;
+  margin-bottom: 1rem;
+  overflow-y: auto;
+}
+
+.review .buttons-wrapper button {
+  width: 12rem;
+  height: 3rem;
   padding: 0.25rem;
-}
+  margin: 0.25rem;
 
-#reviewInstruction {
-  color: rgb(224, 211, 32);
-}
-
-.buttons-wrapper button {
-  width: 160px;
-  height: 48px;
-  margin: 4px;
-
-  border-radius: 24px;
+  border-radius: 2rem;
   border: 1px solid;
   border-color: var(--electric-blue);
 
@@ -27,50 +32,41 @@
   box-shadow: 0px 1.5px 1.5px 0px var(--electric-blue);
 }
 
-.buttons-wrapper button.active {
+.review .buttons-wrapper button.active {
   box-shadow: inset 0px 2px 2px var(--midnight-black);
   background: #0167ff;
   color: white;
 }
 
-.review .buttons-wrapper {
-  height: 280px;
-  display: grid;
-  justify-content: right;
-  padding: 1rem;
-  overflow-y: auto;
+.review .buttons-wrapper::-webkit-scrollbar {
+    width: 0.4em; 
 }
 
-/* Custom scrollbar styles for webkit-based browsers */
-.buttons-wrapper::-webkit-scrollbar {
-  
-    width: 0.4em; /* Set the width of the scrollbar */
-}
-
-.buttons-wrapper::-webkit-scrollbar-track {
+.review .buttons-wrapper::-webkit-scrollbar-track {
   background-color: var(
     --light-grey-0
-  ); /* Set the color of the scrollbar track e.g. #f1f1f1 */
-  margin-block-start: 1.5rem;
-  margin-block-end: 8rem;
+  ); 
+  margin-block-start: 1rem;
+  margin-block-end: 4rem;
 }
 
-.buttons-wrapper::-webkit-scrollbar-thumb {
-  background-color: #e4e8e9; /* Set the color of the scrollbar thumb */
-  border-radius: 200vw; /* Set the border radius of the scrollbar thumb #888 */
+.review .buttons-wrapper::-webkit-scrollbar-thumb {
+  background-color: #e4e8e9; 
+  border-radius: 200vw; 
   border: 1 solid var(--light-grey-2);
 }
 
-.buttons-wrapper::-webkit-scrollbar-thumb:hover {
+.review .buttons-wrapper::-webkit-scrollbar-thumb:hover {
   background-color: var(
     --light-grey-3
-  ); /* Set the color of the scrollbar thumb on hover e.g. #555 */
+  ); 
 }
 
-.btn-submit-review-active {
-  width: 240px;
-  height: 40px;
-  margin: 4px;
+.review .btn-submit {
+  width: 8rem;
+  height: 2.5rem;
+  padding: 0.25rem;
+  margin: 0.25rem;
 
   border-radius: 24px;
   border: 1px solid;
@@ -87,16 +83,17 @@
   box-shadow: 0px 1.5px 1.5px 0px var(--electric-blue);
 }
 
-.btn-submit-review {
-  width: 240px;
-  height: 40px;
-  margin: 4px;
+.review .btn-submit-active {
+  width: 8rem;
+  height: 2.5rem;
+  padding: 0.25rem;
+  margin: 0.25rem;
 
   border-radius: 24px;
   border: 1px solid;
   border-color: var(--electric-blue);
 
-  background: var(--electric-blue);
+  background: red;
 
   font: inherit;
   color: var(--baby-yellow);
@@ -107,15 +104,14 @@
   box-shadow: inset 0px 2px 2px var(--midnight-black);
 }
 
-.previewRating {
+.preview-and-submit {
   display: flex;
-  justify-content: center;
   align-items: center;
-  margin-top: 1rem;
-  margin-bottom: 0.5rem;
+  justify-content: space-evenly;
+  /* margin: 1rem; */
 }
 
-.previewRating h2, p {
+.preview-and-submit #rating {
   margin-top: 0px;
   margin-bottom: 0px;
 }

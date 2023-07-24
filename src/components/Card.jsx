@@ -13,7 +13,7 @@ import Summary from "./Summary";
 import { useState } from "react";
 
 function Card({ filteredItem }) {
-  const [activeSlideIndex, setActiveSlideIndex] = useState(0);
+  // const [activeSlideIndex, setActiveSlideIndex] = useState(0);
 
   // Create an array of slides (filteredItem and Review) using map()
   const slides = [

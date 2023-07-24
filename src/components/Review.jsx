@@ -53,8 +53,9 @@ function Review(id_entity) {
   };
 
   const handleFormSubmit = async () => {
-
+    console.log("before setting state: " + submitReview)
     setSubmitReview(!submitReview);
+    console.log("after setting state: " + submitReview)
     if (submitReview === false){
       console.log("submit button has been unselected")
       return;
@@ -97,7 +98,6 @@ function Review(id_entity) {
 
   return (
     <div className="review">
-      <p id="reviewInstruction">Select any of the qualities below</p>
       <div className="buttons-wrapper">
         {qualities.map((option) => (
           <button
@@ -109,21 +109,19 @@ function Review(id_entity) {
           </button>
         ))}
       </div>
-      <div className="previewRating">
-        <p>You're giving it a </p>
-        <h2>{calculatedRating}</h2>
-        <p> rating</p>
+      <div className="preview-and-submit">
+        <h2 id="rating">{calculatedRating}</h2>
+        <button
+          onClick={handleFormSubmit}
+          className={
+            submitReview === false
+              ? "btn-submit-active"
+              : "btn-submit"
+          }
+        >
+          Submit
+        </button>
       </div>
-      <button
-        onClick={handleFormSubmit}
-        className={
-          submitReview === true
-            ? "btn-submit-review-active"
-            : "btn-submit-review"
-        }
-      >
-        Submit
-      </button>
     </div>
   );
 }
