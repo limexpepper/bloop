@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import supabase from "../supabase";
+import Sparkles from "./Sparkles/Sparkles";
 
 function Review(id_entity) {
 
@@ -110,7 +111,9 @@ function Review(id_entity) {
         ))}
       </div>
       <div className="preview-and-submit">
-        <h2 id="rating">{calculatedRating}</h2>
+        <Sparkles>
+          <h2 id="rating">{calculatedRating}</h2>
+        </Sparkles>
         <button
           onClick={handleFormSubmit}
           className={
