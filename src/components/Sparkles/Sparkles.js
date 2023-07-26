@@ -23,22 +23,26 @@ const generateSparkle = color => {
   return sparkle;
 };
 
-const Sparkles = ({ color = DEFAULT_COLOR, children, ...delegated }) => {
+const Sparkles = ({ animateSparkles, color = DEFAULT_COLOR, children, ...delegated }) => {
+    console.log("animate sparkles in Sparkles: " + animateSparkles)
   // ... (rest of the code)
   const [sparkles, setSparkles] = React.useState(() => {
     return range(3).map(() => generateSparkle(color));
   });
+
   const prefersReducedMotion = usePrefersReducedMotion();
   useRandomInterval(
     () => {
-      const sparkle = generateSparkle(color);
-      const now = Date.now();
-      const nextSparkles = sparkles.filter(sp => {
-        const delta = now - sp.createdAt;
-        return delta < 750;
-      });
-      nextSparkles.push(sparkle);
-      setSparkles(nextSparkles);
+        if (animateSparkles) {
+            const sparkle = generateSparkle(color);
+            const now = Date.now();
+            const nextSparkles = sparkles.filter(sp => {
+                const delta = now - sp.createdAt;
+                return delta < 750;
+            });
+            nextSparkles.push(sparkle);
+            setSparkles(nextSparkles);
+        }
     },
     prefersReducedMotion ? null : 50,
     prefersReducedMotion ? null : 450

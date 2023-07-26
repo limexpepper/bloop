@@ -20,13 +20,34 @@ function Review(id_entity) {
   ];
 
   const [qualities, setQualities] = useState(options);
+  const [prevRating, setPrevRating] = useState("___");
   const [calculatedRating, setCalculatedRating] = useState("___");
+  const [animateSparkles, setAnimateSparkles] = useState(false);
+  const [timeoutId, setTimeoutId] = useState(null); // New state variable to store the timeout ID
+
   const [switcher, setSwitcher] = useState(false);
   const [submitReview, setSubmitReview] = useState(true);
 
   useEffect(() => {
+    setPrevRating(calculatedRating);
     setCalculatedRating(calculateRating());
   }, [switcher])
+
+  useEffect(() => {
+    if (prevRating !== calculatedRating) {
+      setAnimateSparkles(true); // Trigger the animation when the rating changes
+
+      if (timeoutId) {
+        clearTimeout(timeoutId); // Clear any previous timeouts if they exist
+      }
+
+      const newTimeoutId = setTimeout(() => {
+        setAnimateSparkles(false); // Stop the animation after a short delay (e.g., 2000ms)
+      }, 3000); // Adjust the delay time (in milliseconds) as per your preference
+
+      setTimeoutId(newTimeoutId); // Store the new timeout ID
+    }
+  }, [prevRating, calculatedRating]);
 
   const calculateRating = () => {
     const isNill = qualities.every((option) => option.selected === false);
@@ -111,7 +132,7 @@ function Review(id_entity) {
         ))}
       </div>
       <div className="preview-and-submit">
-        <Sparkles>
+        <Sparkles animateSparkles={animateSparkles}>
           <h2 id="rating">{calculatedRating}</h2>
         </Sparkles>
         <button
