@@ -6,15 +6,15 @@
   display: inline-block; /* make container hug text contents */
   /* height: 28px; width: 79px; */
   border: 0px none;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   align-items: center;
   font-weight: bold;
-  background: var(--light-grey-0);
-  color: var(--dark-grey);
+  background: var(--silver-light);
+  color: var(--light-grey);
   margin: 0.25rem;
 }
 
@@ -22,7 +22,7 @@
   display: inline-block; /* make container hug text contents */
   /* height: 28px; width: 79px; */
   border: 0px none;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
@@ -38,15 +38,15 @@
   display: inline-block; /* make container hug text contents */
   /* height: 28px; width: 79px; */
   border: 0px none;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   align-items: center;
   font-weight: bold;
-  background: var(--light-grey-0);
-  color: var(--silver-grey);
+  background: var(--silver-light);
+  color: var(--silver);
   margin: 0.25rem;
 }
 
@@ -54,7 +54,7 @@
   display: inline-block; /* make container hug text contents */
   /* height: 28px; width: 79px; */
   border: 0px none;
-  border-radius: 0.25rem;
+  border-radius: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
@@ -69,22 +69,23 @@
 .rating-tag-null {
   display: inline-block; /* make container hug text contents */
   /* height: 28px; width: 79px; */
-  border: 0px none;
-  border-radius: 0.25rem;
+  border: 1px solid;
+  border-color: var(--silver-light);
+  color: var(--light-grey);
+  border-radius: 1rem;
   padding-left: 0.5rem;
   padding-right: 0.5rem;
   padding-top: 0.25rem;
   padding-bottom: 0.25rem;
   align-items: center;
   font-weight: bold;
-  background: var(--light-grey-0);
-  color: var(--dark-grey);
+  /* background: var(--primary-colour); */
   margin: 0.25rem;
 }
 
 .summaryInfo {
   display: block;
-  margin: 1rem;
+  margin: 0.25rem;
 }
 
 .summaryInfo h1,

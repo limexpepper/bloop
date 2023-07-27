@@ -6,28 +6,25 @@
   box-sizing: border-box; /* setting this to border-box as the css default is content-box */
 }
 
-::placeholder {
-  color: white;
-}
+
 
 :root {
-  --electric-blue: #0167FF;
-  --baby-yellow: #FEFFF4;
-
-  --midnight-black:#1B2021;
-
-  --dark-grey: #485558;
-  --silver-grey: #758A8F;
-  --light-grey-3: #ADB9BC;
-  --light-grey-2: #C8D0D2;
-  --light-grey-1: #E4E8E9;
-  --light-grey-0: #F1F4F4;
+  --primary-colour: #FEFFF4;
+  --secondary-colour:#0B2E35;
+  --accent-colour: #0167FF;
 
   --gold: #AE7D00;
   --light-gold: #FFF5DB;
-
+  --silver: #758A8F;
+  --silver-light: #F1F4F4;
   --bronze: #B45900;
   --light-bronze: #FFEDDB;
+  --semantic-green: #45E103;
+  --semantic-green-dark: #0e2d01;
+
+  --medium-grey: #485558;
+  --light-grey: #C8D0D2;
+  --white: #FFFFFF;
 }
 
 body {
@@ -36,13 +33,13 @@ body {
   margin-right: 217px;
   margin-left: 217px;
 
-  background-color: var(--baby-yellow);
+  background-color: var(--primary-colour);
 
   font-family: 'Hauora Sans';
   font-weight: normal;
   text-align: left;  
   font-size: 1rem;
-  color: var(--midnight-black);
+  color: var(--secondary-colour);
 }
 
 h1 {
@@ -79,20 +76,20 @@ p {
 }
 
 .nav a {
-  color: var(--electric-blue);
+  color: var(--silver);
   text-decoration: none;
 }
 
 .nav a:hover {
-  color: hotpink;
+  color: var(--accent-colour);
 }
 
-.logo {
+.nav .logo {
   font-family: 'Poppins';
   font-weight: bold;
   text-align: left;  
   font-size: 2rem;
-  color: var(--electric-blue);
+  color: var(--accent-colour);
 }
 
 .swiper-button-next,
