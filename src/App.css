@@ -1,5 +1,21 @@
-@import './Search.css';
-@import './Filter.css';
-@import './Card.css';
-@import './Summary.css';
-@import './Review.css';
+@import "./Search.css";
+@import "./Filter.css";
+@import "./Card.css";
+@import "./Summary.css";
+@import "./Review.css";
+
+.welcome-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 2rem;
+  margin-bottom: 2rem;
+}
+
+.welcomeMessage {
+  font-family: inherit;
+  font-weight: normal;
+  font-size: 1.5rem;
+  text-align: center;
+  color: var(--accent-colour);
+}

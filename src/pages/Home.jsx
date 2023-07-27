@@ -5,6 +5,7 @@ import supabase from '../supabase'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
+import Sparkles from '../components/Sparkles/Sparkles';
 
 function Home() {
     const [items, setItems] = useState([])
@@ -30,6 +31,9 @@ function Home() {
     
   return (
     <div className="Home">
+        <div className="welcome-wrapper">
+            <Sparkles animateSparkles={true}><div className="welcomeMessage">Use Bloopy to search and rate toilets in Singapore</div></Sparkles>  
+        </div>
         <div className="search-filter-wrapper">
             <Search items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} searchTerm={searchTerm} setSearchTerm={setSearchTerm}/>
             <Filter items={items} setFilteredItems={setFilteredItems} activeFilter={activeFilter} setActiveFilter={setActiveFilter} searchTerm={searchTerm}/>
