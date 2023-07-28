@@ -123,6 +123,13 @@ See https://www.youtube.com/watch?v=4aJPgKLwAGY at 11:44
   justify-content: center;
 } */
 
+@media (min-width: 700px) {
+
+  .container {
+    min-width: 680px;
+  }
+}
+
 @media (min-width: 900px) {
 
   .container {
