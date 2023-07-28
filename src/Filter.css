@@ -1,9 +1,9 @@
 .filter {
-  width: 70%;
+  width: 100%;
   display: flex;
 }
+
 .filter button {
-  flex: 1;
   margin: 1rem;
   border-radius: 2rem;
   border: none;
@@ -29,4 +29,19 @@
   /* box-shadow: inset 0px 2px 2px var(--dark-grey);
   background: var(--accent-colour); */
   color: var(--accent-colour);
+}
+
+@media (max-width: 400px) {
+
+  .filter button {
+    margin: 0.5rem;
+  }
+}
+
+@media (max-width: 900px) {
+
+  .filter {
+    justify-content: center;
+  }
+  
 }
