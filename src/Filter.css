@@ -1,12 +1,12 @@
+.filter {
+  width: 70%;
+  display: flex;
+}
 .filter button {
-  width: 121px;
-  height: 52px;
-  margin: 4px;
-
-  border-radius: 24px;
+  flex: 1;
+  margin: 1rem;
+  border-radius: 2rem;
   border: none;
-  /* border: 1px solid;
-  border-color: var(--accent-colour); */
 
   background: inherit;
 
@@ -26,7 +26,7 @@
 }
 
 .filter button.active {
-  box-shadow: inset 0px 2px 2px var(--dark-grey);
-  background: var(--accent-colour);
-  color: var(--white);
+  /* box-shadow: inset 0px 2px 2px var(--dark-grey);
+  background: var(--accent-colour); */
+  color: var(--accent-colour);
 }
