@@ -9,7 +9,6 @@ import styled, { keyframes } from 'styled-components'; // Assuming styled-compon
 const DEFAULT_COLOR = '#FFC700';
 
 const generateSparkle = color => {
-  // ... (rest of the code)
   const sparkle = {
     id: String(random(10000, 99999)),
     createdAt: Date.now(),
@@ -25,7 +24,6 @@ const generateSparkle = color => {
 
 const Sparkles = ({ animateSparkles, color = DEFAULT_COLOR, children, ...delegated }) => {
     console.log("animate sparkles in Sparkles: " + animateSparkles)
-  // ... (rest of the code)
   const [sparkles, setSparkles] = React.useState(() => {
     return range(3).map(() => generateSparkle(color));
   });
@@ -66,19 +64,7 @@ const Wrapper = styled.span`
   display: inline-block;
   position: relative;
 `;
-// const SparkleWrapper = styled.span`
-//   position: absolute;
-//   display: block;
-//   @media (prefers-reduced-motion: no-preference) {
-//     animation: ${comeInOut} 700ms forwards;
-//   }
-// `;
-// const SparkleSvg = styled.svg`
-//   display: block;
-//   @media (prefers-reduced-motion: no-preference) {
-//     animation: ${spin} 1000ms linear;
-//   }
-// `;
+
 const ChildWrapper = styled.strong`
   position: relative;
   z-index: 1;

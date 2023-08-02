@@ -1,4 +1,4 @@
-@import url('./fonts.css');
+@import url("./fonts.css");
 
 *,
 *::before,
@@ -6,25 +6,24 @@
   box-sizing: border-box; /* setting this to border-box as the css default is content-box */
 }
 
-
-
 :root {
-  --primary-colour: #FEFFF4;
-  --secondary-colour:#0B2E35;
-  --accent-colour: #0167FF;
+  --primary-colour: #fefff4;
+  --secondary-colour: #0b2e35;
+  --accent-colour: #0167ff;
+  --accent-colour-light: #76adff;
 
-  --gold: #AE7D00;
-  --light-gold: #FFF5DB;
-  --silver: #758A8F;
-  --silver-light: #F1F4F4;
-  --bronze: #B45900;
-  --light-bronze: #FFEDDB;
-  --semantic-green: #45E103;
+  --gold: #ae7d00;
+  --light-gold: #fff5db;
+  --silver: #758a8f;
+  --silver-light: #f1f4f4;
+  --bronze: #b45900;
+  --light-bronze: #ffeddb;
+  --semantic-green: #45e103;
   --semantic-green-dark: #0e2d01;
 
   --medium-grey: #485558;
-  --light-grey: #C8D0D2;
-  --white: #FFFFFF;
+  --light-grey: #c8d0d2;
+  --white: #ffffff;
 }
 
 body {
@@ -35,61 +34,27 @@ body {
 
   background-color: var(--primary-colour);
 
-  font-family: 'Hauora Sans';
+  font-family: "Hauora Sans";
   font-weight: normal;
-  text-align: left;  
+  text-align: left;
   font-size: 1rem;
   color: var(--secondary-colour);
 }
 
 h1 {
-  font-weight: bold; 
+  font-weight: bold;
 }
 
 h2 {
-  font-weight: medium; 
+  font-weight: medium;
 }
 
 h3 {
-  font-weight: light; 
+  font-weight: light;
 }
 
 p {
-  font-weight: normal; 
-}
-
-.nav {
-  display: flex;
-  padding: 0.25rem; 
-  /* box-shadow: 0 2px 2px -2px rgba(0,0,0,.2);  */
-  justify-content: space-between;
-  align-items: center;
-  margin-bottom: 2.5rem; /* spacing between nav and search elements */
-}
-
-.nav ul {
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
-  gap: 1rem;
-}
-
-.nav a {
-  color: var(--silver);
-  text-decoration: none;
-}
-
-.nav a:hover {
-  color: var(--accent-colour);
-}
-
-.nav .logo {
-  font-family: 'Poppins';
-  font-weight: bold;
-  text-align: left;  
-  font-size: 2rem;
-  color: var(--accent-colour);
+  font-weight: normal;
 }
 
 .swiper-button-next,
@@ -123,24 +88,51 @@ See https://www.youtube.com/watch?v=4aJPgKLwAGY at 11:44
   justify-content: center;
 } */
 
-@media (min-width: 700px) {
+.welcomeMessage {
+  justify-content: center;
+  align-items: center;
+  height: 5rem;
+  margin: 1rem 1rem 3rem 1rem; /* top | right | bottom | left */
+  display: flex;
+  flex-wrap: wrap;
+  padding: 1rem;
+  font-family: inherit;
+  font-weight: bold;
+  font-size: 3rem;
+  line-height: 2.8rem;
+  text-align: center;
+  color: var(--accent-colour-light);
+}
 
+@media (max-width: 700px) {
+
+  .welcomeMessage {
+    font-size: 1.5rem;
+  }
+}
+
+@media (min-width: 700px) {
   .container {
     min-width: 680px;
+  }
+
+  .welcomeMessage {
+    font-size: 1.5rem;
   }
 }
 
 @media (min-width: 900px) {
-
   .container {
     min-width: 800px;
+  }
+
+  .welcomeMessage {
+    font-size: 2rem;
   }
 }
 
 @media (min-width: 1000px) {
-
   .container {
     min-width: 1000px;
   }
-  
 }
