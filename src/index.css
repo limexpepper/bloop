@@ -8,6 +8,7 @@
 
 :root {
   --primary-colour: #fefff4;
+  --primary-colour-dark: #f4f9c8;
   --secondary-colour: #0b2e35;
   --accent-colour: #0167ff;
   --accent-colour-light: #76adff;
@@ -28,9 +29,11 @@
 
 body {
   display: flex;
+  /* flex-direction: column; */
   /* flex-wrap: wrap;
   align-items: center; */
   justify-content: center;
+  min-height: 100vh; /* so that footer stays at the bottom */
 
   background-color: var(--primary-colour);
 
@@ -91,43 +94,25 @@ See https://www.youtube.com/watch?v=4aJPgKLwAGY at 11:44
 .welcomeMessage {
   justify-content: center;
   align-items: center;
-  height: 5rem;
-  margin: 1rem 1rem 3rem 1rem; /* top | right | bottom | left */
+  margin-bottom: 3rem;
   display: flex;
   flex-wrap: wrap;
-  padding: 1rem;
   font-family: inherit;
   font-weight: bold;
-  font-size: 3rem;
-  line-height: 2.8rem;
+  font-size: 1.5rem;
   text-align: center;
   color: var(--accent-colour-light);
-}
-
-@media (max-width: 700px) {
-
-  .welcomeMessage {
-    font-size: 1.5rem;
-  }
 }
 
 @media (min-width: 700px) {
   .container {
     min-width: 680px;
   }
-
-  .welcomeMessage {
-    font-size: 1.5rem;
-  }
 }
 
 @media (min-width: 900px) {
   .container {
     min-width: 800px;
-  }
-
-  .welcomeMessage {
-    font-size: 2rem;
   }
 }
 

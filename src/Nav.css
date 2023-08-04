@@ -1,111 +1,20 @@
 header {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 0.25rem;
-  margin-bottom: 2.5rem; /* spacing between nav and rest of the app */
-}
-
-.nav {
-  position: relative;
-  display: flex;
-  flex-direction: row;
   justify-content: center;
-  align-items: center; 
+  margin-top: 1rem;
+  margin-bottom: 0; /* spacing between nav and rest of the app */
 }
 
-.menu-icon {
-  position: absolute; 
-  /* note that menu-icon's parent's position must be relative. This is as per CSS specification.
-  When you apply position: relative to a parent element, it creates a new positioning context for its child elements with position: absolute (or position: fixed). This means that when a child element has position: absolute, it will be positioned relative to the edges of its nearest positioned ancestor, which is the parent with position: relative. This behavior is defined in the CSS specification to allow more fine-grained control over the positioning of child elements. When you set position: relative on the parent, it becomes a positioning container for its child elements with position: absolute. This allows you to position those children relative to the edges of the parent, rather than positioning them relative to the entire page or to the nearest ancestor with a position other than static.
-  */
-  /* top: 1rem; */
-  right: 1rem;
-  cursor: pointer;
-}
-
-.toilet-bowl-icon {
-  width: 1.5rem; 
-  height: 1.5rem; 
-}
-
-.showMenu {
-  /* display: flex; */
-  position: absolute; /* note that menu-icon's parent's position must be relative. This is as per CSS specification */
-  /* top: 1rem; */
-  right: 3rem; 
-  /* Adjust the right value to align the menu with the menu-icon */
-}
-
-.hideMenu {
-  display: none;
-}
-
-header .logo a {
+header a {
   font-family: "Poppins";
   font-weight: bold;
   text-align: left;
   font-size: 2rem;
   color: var(--accent-colour);
   gap: 1rem;
-}
-
-header ul {
-  display: flex;
-  flex-direction: row;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  gap: 1rem;
-  white-space: nowrap;
-}
-
-header a {
-  color: var(--silver);
   text-decoration: none;
 }
 
 header a:hover {
-  color: var(--accent-colour);
-}
-
-@media (max-width: 500px) {
-  header {
-    flex-direction: column;
-    gap: 1rem;
-    justify-content: center;
-    align-items: center;
-  }
-
-  header ul {
-    flex-direction: column;
-    gap: 0.25rem;
-  }
-
-  header .logo a {
-    font-size: 1rem;
-  }
-
-  .toilet-bowl-icon {
-    width: 1rem; 
-    height: 1rem; 
-  }
-  
-
-  header a {
-    font-size: 0.8rem;
-  }
-
-  .nav {
-    flex-direction: column; /* Change to column direction for small screens */
-  }
-
-  .menu-icon {
-    width: 100%; 
-  }
-
-  .showMenu {
-    top: 1rem; 
-    width: 100%; 
-  }
+  color: var(--accent-colour-light);
 }
