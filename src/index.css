@@ -8,10 +8,12 @@
 
 :root {
   --primary-colour: #fefff4;
-  --primary-colour-dark: #f4f9c8;
+  --primary-colour-medium: #f4f9c8;
+  --primary-colour-dark: #D4DE73;
   --secondary-colour: #0b2e35;
   --accent-colour: #0167ff;
   --accent-colour-light: #76adff;
+  --accent-colour-dark: #0148B4;
 
   --gold: #ae7d00;
   --light-gold: #fff5db;
@@ -19,8 +21,8 @@
   --silver-light: #f1f4f4;
   --bronze: #b45900;
   --light-bronze: #ffeddb;
-  --semantic-green: #45e103;
-  --semantic-green-dark: #0e2d01;
+  --semantic-green: #D7FFC7;
+  --semantic-green-dark: #ADE597;
 
   --medium-grey: #485558;
   --light-grey: #c8d0d2;
@@ -90,6 +92,10 @@ See https://www.youtube.com/watch?v=4aJPgKLwAGY at 11:44
   align-items: center;
   justify-content: center;
 } */
+
+.container {
+  padding: 0.5rem;
+}
 
 .welcomeMessage {
   justify-content: center;

@@ -20,8 +20,8 @@ function Review(id_entity) {
   ];
 
   const [qualities, setQualities] = useState(options);
-  const [prevRating, setPrevRating] = useState("___");
-  const [calculatedRating, setCalculatedRating] = useState("___");
+  const [prevRating, setPrevRating] = useState(0);
+  const [calculatedRating, setCalculatedRating] = useState(0);
   const [animateSparkles, setAnimateSparkles] = useState(false);
   const [timeoutId, setTimeoutId] = useState(null); // New state variable to store the timeout ID
 
@@ -61,7 +61,7 @@ function Review(id_entity) {
     const goldCount = qualities.slice(8, 12).filter((option) => option.selected === true).length;
     const isGold = isSilver && silverCountOptional === 2 && (goldCount >= 1);
 
-    return isNill ? "___" : isGold ? "gold" : isSilver & isSilverOptional ? "silver" : "bronze";
+    return isNill ? 0 : isGold ? 3 : isSilver & isSilverOptional ? 2 : 1;
   };
 
   const handleOptionClick = (id_quality) => {
@@ -97,15 +97,15 @@ function Review(id_entity) {
 
     const { error } = await supabase.from("reviews-toilets").insert({
       id_entity: id_entity.id_entity,
-      rating: calculatedRating, 
-      autoTap: dataToInsert["auto-tap"],
-      autoSoap: dataToInsert["auto-soap"],
+      stars: calculatedRating, 
+      "auto-tap": dataToInsert["auto-tap"],
+      "auto-soap": dataToInsert["auto-soap"],
       dry: dataToInsert.dry,
       odourless: dataToInsert.odorless,
       grimefree: dataToInsert["grime-free"],
-      spaciousCubicle: dataToInsert["spacious cubicle"],
-      noEntranceDoor: dataToInsert["no entrance door"],
-      paperTowels: dataToInsert["paper towels"],
+      "spacious-cubicle": dataToInsert["spacious cubicle"],
+      "no-entrance-door": dataToInsert["no entrance door"],
+      "paper-towels": dataToInsert["paper towels"],
       mirror: dataToInsert.mirror,
       music: dataToInsert.music,
       scent: dataToInsert.scent,
@@ -133,7 +133,7 @@ function Review(id_entity) {
       </div>
       <div className="preview-and-submit">
         <Sparkles animateSparkles={animateSparkles}>
-          <h2 id="rating">{calculatedRating}</h2>
+          <h2 id="rating">{calculatedRating} star</h2>
         </Sparkles>
         <button
           onClick={handleFormSubmit}

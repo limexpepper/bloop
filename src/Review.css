@@ -33,9 +33,9 @@
 }
 
 .review .buttons-wrapper button.active {
-  box-shadow: inset 0px 2px 2px var(--secondary-colour);
-  background: var(--accent-colour);
-  color: var(--primary-colour);
+  box-shadow: inset 0px 2px 2px var(--primary-colour-dark);
+  background: var(--primary-colour-medium);
+  color: var(--secondary-colour);
 }
 
 .review .buttons-wrapper::-webkit-scrollbar {
@@ -75,7 +75,8 @@
   background: var(--accent-colour);
 
   font: inherit;
-  color: var(--primary-colour);
+  font-weight: bold;
+  color: var(--accent-colour-light);
 
   cursor: pointer;
 
@@ -96,12 +97,13 @@
   background: var(--semantic-green);
 
   font: inherit;
-  color: var(--semantic-green-dark);
+  font-weight: bold;
+  color: var(--accent-colour);
 
   cursor: pointer;
 
   /* offset-x | offset-y | blur-radius | spread-radius | color */
-  box-shadow: inset 0px 2px 2px var(--semantic-green);
+  box-shadow: inset 0px 2px 2px var(--semantic-green-dark);
 }
 
 .preview-and-submit {

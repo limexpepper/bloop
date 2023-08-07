@@ -5,20 +5,19 @@ import supabase from '../supabase'
 import React from 'react'
 import { useEffect, useState } from 'react'
 import { motion, AnimatePresence } from "framer-motion";
-import Sparkles from '../components/Sparkles/Sparkles';
 
 function Home() {
     const [items, setItems] = useState([])
     const [filteredItems, setFilteredItems] = useState([])
     const [activeFilter, setActiveFilter] = useState("unselected")
     const [searchTerm, setSearchTerm] = useState("");
-    var filterSelected = false;
+    // var filterSelected = false;
 
     const fetchData = async () => {
         const { data } = await supabase
         .from('entities')
         .select()
-
+        
         setItems(data) 
         setFilteredItems(data)
         //console.log("data from supabase: ", data)
