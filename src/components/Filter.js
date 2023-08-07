@@ -10,7 +10,7 @@ function Filter({items, setFilteredItems, activeFilter, setActiveFilter, searchT
     const filtered = items.filter((item) => {
         if (searchTerm === "" && item.type.toString().includes(activeFilter)) {
           return true;
-        } else if (item.location.toString().toLowerCase().includes(searchTerm.toLowerCase()) && item.type.toString().includes(activeFilter)){
+        } else if (item.place.toString().toLowerCase().includes(searchTerm.toLowerCase()) && item.type.toString().includes(activeFilter)){
           return true;
         } else if (item.address.toString().toLowerCase().includes(searchTerm.toLowerCase()) && item.type.toString().includes(activeFilter)){
           return true;

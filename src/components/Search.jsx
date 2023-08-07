@@ -6,7 +6,7 @@ function Search({ items, setFilteredItems, activeFilter, searchTerm, setSearchTe
 
   useEffect(() => {
     const filteredItems = items.filter((item) => {
-      if (item.location.toString().toLowerCase().includes(searchTerm.toLowerCase())) {
+      if (item.place.toString().toLowerCase().includes(searchTerm.toLowerCase())) {
           if (activeFilter === "mall" && item.type.toString() === "mall"){
               return true
           } else if (activeFilter === "cafe" && item.type.toString() === "cafe"){

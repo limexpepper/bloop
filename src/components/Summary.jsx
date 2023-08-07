@@ -17,9 +17,9 @@ function Summary({ filteredItem }) {
         - filteredItem.type.slice(1): This part extracts the rest of the string starting from the second character. It effectively removes the first character from the original string.
         
         As such, the result is from "mall" to "Mall" */}
-        <div className="rating-tag-bronze">Bronze</div>
+        {/* <div className="rating-tag-bronze">Bronze</div>
         <div className="rating-tag-silver">Silver</div>
-        <div className="rating-tag-gold">Gold</div>
+        <div className="rating-tag-gold">Gold</div> */}
         {/* <div
           className={
             filteredItem.avgToiletRating === "bronze"
@@ -35,10 +35,12 @@ function Summary({ filteredItem }) {
             ? "Not yet rated"
             : filteredItem.avgToiletRating}
         </div> */}
+        
+        <div className="stars">{filteredItem.averagestars} stars</div>
       </div>
       <div className="summaryInfo">
         <h1>{filteredItem.place}</h1>
-        <p>{filteredItem.address}</p>
+        <p className="address">{filteredItem.address}</p>
       </div>
     </div>
   );

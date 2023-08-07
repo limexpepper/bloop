@@ -11,12 +11,12 @@ function Home() {
     const [filteredItems, setFilteredItems] = useState([])
     const [activeFilter, setActiveFilter] = useState("unselected")
     const [searchTerm, setSearchTerm] = useState("");
-    // var filterSelected = false;
 
     const fetchData = async () => {
         const { data } = await supabase
         .from('entities')
         .select()
+        .order('place');
         
         setItems(data) 
         setFilteredItems(data)
