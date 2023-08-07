@@ -1,7 +1,7 @@
 footer {
     margin-top: 1rem; 
     padding: 1rem;
-    background-color: var(--primary-colour-dark);
+    background-color: var(--primary-colour-medium);
     width: 100%;
   }
 
@@ -10,7 +10,8 @@ footer {
   }
   
   footer a {
-    color: var(--silver);
+    font-weight: bold;
+    color: var(--medium-grey);
     text-decoration: none;
   }
   
