@@ -5,11 +5,11 @@ function Summary({ filteredItem }) {
   
   return (
     <div>
-      <div className="tag-wrapper">
-        <div className="type">
+      <div className="type">
           {filteredItem.type.charAt(0).toUpperCase() +
             filteredItem.type.slice(1)}
-        </div>
+      </div>
+      <div className="stars-wrapper">
         {/*         
         - The + operator is used to concatenate two strings
         - filteredItem.type.charAt(0): This part extracts the first character of the filteredItem.type string.
@@ -37,6 +37,7 @@ function Summary({ filteredItem }) {
         </div> */}
         
         <div className="stars">{filteredItem.averagestars} stars</div>
+        <div className="reviewCount">based on {filteredItem.totalreviews} reviews</div>
       </div>
       <div className="summaryInfo">
         <h1>{filteredItem.place}</h1>

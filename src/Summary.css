@@ -1,8 +1,11 @@
-.tag-wrapper {
+.stars-wrapper {
+  /* display: flex;
+  align-items: center; */
   display: block;
+  margin: 0.25rem;
 }
 
-.tag-wrapper .stars {
+.stars-wrapper .stars {
   display: inline-block; 
   border: 0px none;
   border-radius: 1rem;
@@ -14,7 +17,11 @@
   font-weight: bold;
   background: var(--primary-colour-medium);
   color: var(--gold);
-  margin: 0.25rem;
+  /* margin: 0.25rem; */
+}
+
+.stars-wrapper .reviewCount {
+  color: var(--silver);
 }
 
 .type {
@@ -30,7 +37,10 @@
   font-weight: bold;
   background: var(--silver-light);
   color: var(--light-grey);
-  margin: 0.25rem;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  margin-left: 0.25rem;
+  margin-right: 10rem;
 }
 /* 
  .rating-tag-gold {
