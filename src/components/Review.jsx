@@ -121,7 +121,7 @@ function Review(id_entity) {
   return (
     <div className="review">
       <div className="review-instructions">Rate this toilet</div>
-      <div className="review-instructions">select if the toilet has...</div>
+      {/* <div className="review-instructions">select if the toilet has...</div> */}
 
       {/* <div className="grading-criteria">at least the first 6 qualities selected for toilet to qualify for 2 stars</div>
       <div className="grading-criteria">and any of the last 3 qualities selected to qualify for 3 stars</div> */}
