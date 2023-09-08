@@ -11,27 +11,17 @@ function Home() {
     const [filteredItems, setFilteredItems] = useState([])
     const [activeFilter, setActiveFilter] = useState("unselected")
     const [searchTerm, setSearchTerm] = useState("");
-    const [testd, setTest] = useState([])
-
 
     const fetchData = async () => {
         const { data } = await supabase
         .from('entities')
-        .select('*, reviews-toilets(*)') 
+        .select()
         .order('place');
-
         
-    
         setItems(data) 
         setFilteredItems(data)
         //console.log("data from supabase: ", data)
     }
-    const fetchData2 = async () => {
-        const { data, error } = await supabase.rpc('get_entity_reviews');
-        setTest(data) 
-
-    }
-    console.log(testd)
 
     useEffect(() => {
         //console.log('Effect is running');

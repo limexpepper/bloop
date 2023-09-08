@@ -4,13 +4,11 @@ function About() {
 
   return (
     <div>
-        <h2>About</h2>
-        <p>Toiletto is a toilet review app.</p>
-        <br></br>
-        <h2>What can you do with Toiletto?</h2>
-        <p>You can do either of two things:</p>
-        <p>1. Check the ratings for toilets around Singapore (only commercial spaces such as malls, attractions and cafes for now)</p>
-        <p>2. Rate your toilet visit experience </p>
+        <h1>About</h1>
+        <h1>Credits</h1>
+        <p>Josh Comeau for sharing the sparkles effect https://www.joshwcomeau.com/react/animated-sparkles-in-react/</p>
+        <p>colours. https://coolors.co/contrast-checker/071218-c0deec , https://color.adobe.com/create/color-wheel , https://hslpicker.com/#f4af01 , https://html-color.codes/brown , https://huemint.com/ , https://colorhunt.co/palettes/popular , https://dribbble.com/shots/popular</p>
+    
     </div>
   )
 }

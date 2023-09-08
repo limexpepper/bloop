@@ -1,0 +1,119 @@
+.stars-wrapper {
+  /* display: flex;
+  align-items: center; */
+  display: block;
+  margin: 0.25rem;
+}
+
+.stars-wrapper .stars {
+  display: inline-block; 
+  border: 0px none;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  align-items: center;
+  font-weight: bold;
+  background: var(--primary-colour-medium);
+  color: var(--gold);
+  /* margin: 0.25rem; */
+}
+
+.stars-wrapper .reviewCount {
+  color: var(--silver);
+}
+
+.type {
+  display: inline-block; /* make container hug text contents */
+  /* height: 28px; width: 79px; */
+  border: 0px none;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  align-items: center;
+  font-weight: bold;
+  background: var(--silver-light);
+  color: var(--light-grey);
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  margin-left: 0.25rem;
+  margin-right: 10rem;
+}
+/* 
+ .rating-tag-gold {
+  display: inline-block;  make container hug text contents 
+  border: 0px none;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  align-items: center;
+  font-weight: bold;
+  background: var(--light-gold);
+  color: var(--gold);
+  margin: 0.25rem;
+}
+
+.rating-tag-silver {
+  display: inline-block;  make container hug text contents 
+  border: 0px none;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  align-items: center;
+  font-weight: bold;
+  background: var(--silver-light);
+  color: var(--silver);
+  margin: 0.25rem;
+}
+
+.rating-tag-bronze {
+  display: inline-block; make container hug text contents 
+  border: 0px none;
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  align-items: center;
+  font-weight: bold;
+  background: var(--light-bronze);
+  color: var(--bronze);
+  margin: 0.25rem;
+} 
+
+.rating-tag-null {
+  display: inline-block;  make container hug text contents 
+  border: 1px solid;
+  border-color: var(--silver-light);
+  color: var(--light-grey);
+  border-radius: 1rem;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  align-items: center;
+  font-weight: bold;
+  margin: 0.25rem;
+} */
+
+
+.summaryInfo {
+  display: block;
+  margin: 0.25rem;
+}
+
+.summaryInfo .address {
+  color: var(--silver);
+}
+
+.summaryInfo h1,
+p {
+  margin: 0.25rem;
+}
