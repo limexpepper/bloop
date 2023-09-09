@@ -6,7 +6,7 @@ I believe commercial entities have a duty to uphold public hygiene standards giv
 
 ### What can you do with Toiletto?
 You can do either of two things:
-(1) Check the ratings for toilets around Singapore (only commercial spaces such as malls, attractions and cafes for now)
+(1) Check the ratings for toilets around Singapore (only commercial spaces such as malls, attractions and cafes for now); and
 (2) Rate your toilet visit experience 
 
 ### Where can I use Toiletto?
